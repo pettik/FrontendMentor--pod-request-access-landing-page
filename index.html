@@ -1,19 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Pod request access landing page</title>
-</head>
-<body>
-  Publish your podcasts everywhere.
+    <!-- FAVICON -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
 
-  Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, 
-  Apple Podcasts, Google Podcasts, Pocket Casts and more!
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS STYLE -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
-  Request access
-</body>
+    <!-- TITLE -->
+    <title>Frontend Mentor | Pod request access landing page</title>
+  </head>
+  <body>
+    <main>
+      <div class="content">
+        <img src="./assets/desktop/logo.svg" alt="Pod Logo" />
+        <div class="content__contain">
+          <div class="heading">
+            <h1><span>Publish your podcasts</span> everywhere.</h1>
+            <p>
+              Upload your audio to Pod with a single click. We'll then
+              distribute your podcast to Spotify, Apple Podcasts, Google
+              Podcasts, Pocket Casts and more!
+            </p>
+          </div>
+          <div class="logos">
+            <img src="./assets/desktop/spotify.svg" alt="Spotify Logo" />
+            <img
+              src="./assets/desktop/apple-podcast.svg"
+              alt="Apple Podcast Logo"
+            />
+            <img
+              src="./assets/desktop/google-podcasts.svg"
+              alt="Google Podcasts Logo"
+            />
+            <img
+              src="./assets/desktop/pocket-casts.svg"
+              alt="Pocket Casts Logo"
+            />
+          </div>
+          <form action="#">
+            <input type="text" placeholder="Email address" />
+            <button>Request Access</button>
+          </form>
+        </div>
+      </div>
+    </main>
+    We’ll then distribute your podcast to Spotify, Apple Podcasts, Google
+    Podcasts, Pocket Casts and more! Request access
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>

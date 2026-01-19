@@ -1,0 +1,136 @@
+:root {
+  --clr-primary-400: hsl(157, 74%, 62%);
+  --clr-blue-300: hsl(225, 40%, 83%);
+  --clr-blue-600: hsl(225, 21%, 45%);
+  --clr-blue-900: hsl(225, 26%, 23%);
+  --clr-blue-950: hsl(224, 35%, 11%);
+  --clr-blue-950a: hsla(225, 36%, 11%, 0.8);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-red-500: hsl(0, 96%, 61%);
+
+  --ff-base: "Chivo", sans-serif;
+
+  --fw-light: 100;
+  --fw-regular: 500;
+  --fw-bold: 700;
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* general styling */
+body {
+  font-family: var(--ff-base);
+  font-weight: var(--fw-light);
+  color: var(--clr-neutral-100);
+  font-size: 0.875rem;
+}
+
+main {
+  background-image:
+    linear-gradient(var(--clr-blue-950a), var(--clr-blue-950a)),
+    url(./../mobile/image-host.jpg);
+  background-size: cover;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.25rem;
+  text-align: center;
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 90%;
+}
+
+.logos > img {
+  width: 3.4375rem;
+  height: min-content;
+}

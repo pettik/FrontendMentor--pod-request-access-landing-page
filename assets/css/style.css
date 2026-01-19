@@ -1,18 +1,22 @@
 :root {
   --clr-primary-400: hsl(157, 74%, 62%);
+  --clr-primary-200: hsl(158, 75%, 81%);
   --clr-blue-300: hsl(225, 40%, 83%);
   --clr-blue-600: hsl(225, 21%, 45%);
   --clr-blue-900: hsl(225, 26%, 23%);
   --clr-blue-950: hsl(224, 35%, 11%);
-  --clr-blue-950a: hsla(225, 36%, 11%, 0.8);
+  --clr-blue-950a: hsla(225, 36%, 11%, 0.9);
   --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-100a: hsla(0, 0%, 100%, 0.5);
   --clr-red-500: hsl(0, 96%, 61%);
 
   --ff-base: "Chivo", sans-serif;
 
+  --fs-32: 2rem;
+
   --fw-light: 100;
   --fw-regular: 500;
-  --fw-bold: 700;
+  --fw-bold: 600;
 }
 
 /* 1. Use a more-intuitive box-sizing model */
@@ -100,9 +104,11 @@ h3 {
 /* general styling */
 body {
   font-family: var(--ff-base);
-  font-weight: var(--fw-light);
-  color: var(--clr-neutral-100);
+  font-weight: var(--fw-bold);
   font-size: 0.875rem;
+  min-height: 100vh;
+  overflow: hidden;
+  color: var(--clr-blue-300);
 }
 
 main {
@@ -110,7 +116,7 @@ main {
     linear-gradient(var(--clr-blue-950a), var(--clr-blue-950a)),
     url(./../mobile/image-host.jpg);
   background-size: cover;
-  min-height: 100vh;
+  height: 100vh;
   background-repeat: no-repeat;
 }
 
@@ -123,14 +129,106 @@ main {
   text-align: center;
 }
 
+.content > img {
+  margin-top: 6.875rem;
+  width: 8.4375rem;
+}
+
+.heading {
+  margin-top: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+.heading h1 {
+  margin-bottom: 1rem;
+  font-size: var(--fs-32);
+  line-height: 1.2;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  color: var(--clr-neutral-100);
+}
+.heading h1 span {
+  color: var(--clr-primary-400);
+}
+
+.heading p {
+  line-height: 1.5;
+}
+
 .logos {
+  margin-bottom: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 90%;
+  max-width: 100%;
 }
 
 .logos > img {
+  filter: invert(1) hue-rotate(185deg) saturate(1.5) brightness(1.25);
+}
+
+.logos > img:nth-child(1) {
   width: 3.4375rem;
-  height: min-content;
+}
+.logos > img:nth-child(2) {
+  width: 2.8125rem;
+}
+.logos > img:nth-child(3) {
+  width: 4.5rem;
+}
+.logos > img:nth-child(4) {
+  width: 4.625rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+form input,
+form button {
+  display: block;
+  width: 100%;
+  outline: none;
+  border-radius: 1.5rem;
+  font-weight: var(--fw-bold);
+}
+
+form input {
+  padding: 0.5rem 2rem;
+  background-color: var(--clr-blue-900);
+  line-height: 2;
+  color: var(--clr-neutral-100);
+  border: solid 0.125rem transparent;
+}
+
+form input::placeholder {
+  color: var(--clr-neutral-100);
+  opacity: 0.5;
+}
+
+form input.alert {
+  border-color: var(--clr-red-500);
+}
+
+.alert-text {
+  color: var(--clr-red-500);
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+form button {
+  border: 0;
+  background-color: var(--clr-primary-400);
+  color: var(--clr-blue-950);
+  cursor: pointer;
+  padding: 0.7rem 0;
+  transition: background 0.4s;
+}
+
+form button:hover {
+  background: var(--clr-primary-200);
+}
+
+@media screen and (min-width: 768px) {
 }

@@ -17,6 +17,8 @@
   --fw-light: 100;
   --fw-regular: 500;
   --fw-bold: 600;
+
+  --w-tablet: 70%;
 }
 
 /* 1. Use a more-intuitive box-sizing model */
@@ -230,5 +232,64 @@ form button:hover {
   background: var(--clr-primary-200);
 }
 
+.pattern-dots {
+  display: none;
+}
+
+/* Tablet size */
 @media screen and (min-width: 768px) {
+  .content {
+    align-items: flex-start;
+    padding: 2.75rem;
+  }
+  .content__contain {
+    display: flex;
+    flex-direction: column;
+    width: 37rem;
+    align-items: flex-start;
+    text-align: left;
+    background-color: var(--clr-blue-950);
+  }
+
+  .heading {
+    max-width: 60%;
+  }
+
+  form {
+    position: relative;
+    width: var(--w-tablet);
+  }
+
+  form input[type="email"] {
+    width: var(--w-tablet);
+  }
+
+  form button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10.75rem;
+    height: 95%;
+  }
+
+  .logos {
+    order: 99;
+    margin-top: 2rem;
+    width: 34.375rem;
+  }
+
+  .content > img.pattern-dots {
+    display: initial;
+    width: auto;
+    transform: translate(290%, -10rem);
+  }
+
+  /* main {
+    background-image:
+      linear-gradient(var(--clr-blue-950a), var(--clr-blue-950a)),
+      url(./../mobile/image-host.jpg);
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+  } */
 }

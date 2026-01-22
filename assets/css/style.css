@@ -252,12 +252,13 @@ form button:hover {
   .background-img {
     position: absolute;
     width: 60vw;
-    height: 100vh;
+    min-height: 800px;
+    max-height: 800px;
     right: 0;
     left: auto;
     top: 0;
     object-fit: cover;
-    object-position: center;
+    object-position: 40%;
     z-index: 0;
   }
 
@@ -300,6 +301,14 @@ form button:hover {
     top: 2px;
     right: 2.5px;
     width: 10.75rem;
+  }
+
+  .alert-text {
+    position: absolute;
+    bottom: -3.3rem;
+    left: 2rem;
+    width: 100%;
+    height: 100%;
   }
 
   .logos {

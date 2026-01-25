@@ -11,7 +11,7 @@
   --clr-neutral-100a: hsla(0, 0%, 100%, 0.5);
   --clr-red-500: hsl(0, 96%, 61%);
 
-  --ff-base: "Chivo", sans-serif;
+  --ff-base: 'Chivo', sans-serif;
 
   --fs-32: 2rem;
 
@@ -275,7 +275,6 @@ form button:hover {
     margin: initial;
     align-items: flex-start;
     padding: 2.75rem;
-
     position: relative;
     z-index: 1;
   }
@@ -310,7 +309,7 @@ form button:hover {
     width: var(--w-tablet);
   }
 
-  form input[type="email"] {
+  form input[type='email'] {
     width: var(--w-tablet);
   }
 
@@ -331,7 +330,7 @@ form button:hover {
 
   .logos {
     order: 99;
-    margin-top: 2rem;
+    margin-top: 5rem;
     width: 34.375rem;
     gap: 2.5rem;
   }
@@ -339,6 +338,20 @@ form button:hover {
   .pattern-dots {
     display: block;
     width: auto;
-    transform: translate(calc(100vw - 128px), -6rem);
+    transform: translate(calc(100vw - 128px), -9rem);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  main {
+    margin-top: 9.5625rem;
+  }
+  .content {
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+
+  .pattern-dots {
+    transform: translate(calc(100vw - 95%), -9rem);
   }
 }

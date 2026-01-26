@@ -352,7 +352,17 @@ form button:hover {
   }
 
   .content__contain {
-    min-width: 46rem;
+    width: 46rem;
+  }
+
+  .heading {
+    max-width: 100%;
+  }
+
+  .heading h1 {
+    max-width: 100%;
+    font-size: 3rem;
+    font-weight: 100;
   }
 
   .heading h1 span {
@@ -360,7 +370,13 @@ form button:hover {
   }
 
   .heading p {
-    max-width: 80%;
+    font-weight: 400;
+    max-width: 28rem;
+    font-size: 125%;
+  }
+
+  form {
+    max-width: 28rem;
   }
 
   .pattern-dots {

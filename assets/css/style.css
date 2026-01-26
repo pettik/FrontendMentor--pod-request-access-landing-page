@@ -11,7 +11,7 @@
   --clr-neutral-100a: hsla(0, 0%, 100%, 0.5);
   --clr-red-500: hsl(0, 96%, 61%);
 
-  --ff-base: 'Chivo', sans-serif;
+  --ff-base: "Chivo", sans-serif;
 
   --fs-32: 2rem;
 
@@ -309,7 +309,7 @@ form button:hover {
     width: var(--w-tablet);
   }
 
-  form input[type='email'] {
+  form input[type="email"] {
     width: var(--w-tablet);
   }
 
@@ -349,6 +349,18 @@ form button:hover {
   .content {
     margin-left: 10rem;
     margin-right: 10rem;
+  }
+
+  .content__contain {
+    min-width: 46rem;
+  }
+
+  .heading h1 span {
+    display: block;
+  }
+
+  .heading p {
+    max-width: 80%;
   }
 
   .pattern-dots {

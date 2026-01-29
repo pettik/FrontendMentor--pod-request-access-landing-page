@@ -1,5 +1,7 @@
 const form = document.querySelector('form');
-const emailInput = document.querySelector('input[type="email"], input[type="text"]');
+const emailInput = document.querySelector(
+  'input[type="email"], input[type="text"]',
+);
 const submitButton = document.querySelector('button');
 
 // Email validation regex
@@ -15,7 +17,7 @@ form.appendChild(errorMessage);
 // Validate email function
 function validateEmail() {
   const emailValue = emailInput.value.trim();
-  
+
   if (!emailRegex.test(emailValue)) {
     emailInput.classList.add('alert');
     errorMessage.style.display = 'block';
@@ -32,7 +34,7 @@ emailInput.addEventListener('change', validateEmail);
 emailInput.addEventListener('blur', validateEmail);
 
 // Form submission
-form.addEventListener('submit', function(event) {
+form.addEventListener('submit', function (event) {
   if (!validateEmail()) {
     event.preventDefault();
   }

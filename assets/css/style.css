@@ -11,7 +11,7 @@
   --clr-neutral-100a: hsla(0, 0%, 100%, 0.5);
   --clr-red-500: hsl(0, 96%, 61%);
 
-  --ff-base: "Chivo", sans-serif;
+  --ff-base: 'Chivo', sans-serif;
 
   --fs-32: 2rem;
 
@@ -19,7 +19,7 @@
   --fw-regular: 500;
   --fw-bold: 600;
 
-  --w-tablet: 70%;
+  --w-tablet: 80%;
 }
 
 /* 1. Use a more-intuitive box-sizing model */
@@ -199,6 +199,14 @@ form {
   flex-direction: column;
   row-gap: 0.5rem;
 }
+
+label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+
 form input,
 form button {
   display: block;
@@ -309,7 +317,7 @@ form button:hover {
     width: var(--w-tablet);
   }
 
-  form input[type="email"] {
+  form input[type='email'] {
     width: var(--w-tablet);
   }
 

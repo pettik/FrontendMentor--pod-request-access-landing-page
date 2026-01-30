@@ -11,7 +11,7 @@
   --clr-neutral-100a: hsla(0, 0%, 100%, 0.5);
   --clr-red-500: hsl(0, 96%, 61%);
 
-  --ff-base: 'Chivo', sans-serif;
+  --ff-base: "Chivo", sans-serif;
 
   --fs-32: 2rem;
 
@@ -19,7 +19,7 @@
   --fw-regular: 500;
   --fw-bold: 600;
 
-  --w-tablet: 80%;
+  --w-tablet: 28rem;
 }
 
 /* 1. Use a more-intuitive box-sizing model */
@@ -302,14 +302,21 @@ form button:hover {
   }
 
   .heading {
-    max-width: 60%;
-
+    max-width: var(--w-tablet);
     margin-top: 3.5rem;
     margin-bottom: 2rem;
-
     text-align: left;
     margin-left: 0;
     margin-right: 0;
+  }
+
+  .heading h1 {
+    font-weight: 100;
+    width: 70%;
+  }
+
+  .heading p {
+    font-weight: 100;
   }
 
   form {
@@ -317,7 +324,7 @@ form button:hover {
     width: var(--w-tablet);
   }
 
-  form input[type='email'] {
+  form input[type="email"] {
     width: var(--w-tablet);
   }
 
@@ -370,7 +377,6 @@ form button:hover {
   .heading h1 {
     max-width: 100%;
     font-size: 3rem;
-    font-weight: 100;
   }
 
   .heading h1 span {

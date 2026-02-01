@@ -11,7 +11,7 @@
   --clr-neutral-100a: hsla(0, 0%, 100%, 0.5);
   --clr-red-500: hsl(0, 96%, 61%);
 
-  --ff-base: "Chivo", sans-serif;
+  --ff-base: 'Chivo', sans-serif;
 
   --fs-32: 2rem;
 
@@ -239,6 +239,18 @@ form input.alert {
   margin-top: 0.5rem;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 form button {
   border: 0;
   background-color: var(--clr-primary-400);
@@ -324,7 +336,7 @@ form button:hover {
     width: var(--w-tablet);
   }
 
-  form input[type="email"] {
+  form input[type='email'] {
     width: var(--w-tablet);
   }
 

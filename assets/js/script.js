@@ -9,9 +9,12 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 // Create error message element
 const errorMessage = document.createElement('p');
-errorMessage.className = 'alert-text';
+errorMessage.id = 'email-error';
+errorMessage.className = 'alert-text visually-hidden';
 errorMessage.textContent = 'Oops! Please check your email';
-errorMessage.style.display = 'none';
+errorMessage.setAttribute('role', 'alert');
+errorMessage.setAttribute('aria-live', 'assertive');
+
 form.appendChild(errorMessage);
 
 // Validate email function
@@ -20,11 +23,13 @@ function validateEmail() {
 
   if (!emailRegex.test(emailValue)) {
     emailInput.classList.add('alert');
-    errorMessage.style.display = 'block';
+    emailInput.setAttribute('aria-invalid', 'true');
+    errorMessage.classList.remove('visually-hidden');
     return false;
   } else {
     emailInput.classList.remove('alert');
-    errorMessage.style.display = 'none';
+    emailInput.setAttribute('aria-invalid', 'false');
+    errorMessage.classList.add('visually-hidden');
     return true;
   }
 }
